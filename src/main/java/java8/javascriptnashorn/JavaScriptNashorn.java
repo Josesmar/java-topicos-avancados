@@ -1,7 +1,9 @@
 package java8.javascriptnashorn;
 
-import javax.script.*;
-import java.io.FileNotFoundException;
+import javax.script.Bindings;
+import javax.script.ScriptContext;
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
 import java.io.FileReader;
 
 public class JavaScriptNashorn {
@@ -16,7 +18,7 @@ public class JavaScriptNashorn {
         bind.put("goodbye", " Até logo");
 
         try {
-            ee.eval(new FileReader("olamundo.js"));
+            ee.eval(new FileReader("src/olamundo.js"));
 
         } catch (Exception e) {
             e.printStackTrace();
